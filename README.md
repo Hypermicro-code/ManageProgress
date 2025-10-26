@@ -168,15 +168,22 @@ Brukes for team/samarbeid.
 
 ---
 
-## 11. Neste steg
+## 11. Deploy med GitHub Pages
 
-1. Implementere **IndexedDBDriver** som første driver.  
-2. Lage **ProgressTableAdapter** (første reelle adapter).  
-3. Bygge enkel testapp for TableCore med 2–3 kolonner og dummy-data.  
-4. Utvide til Estimates og Structured Docs.  
+Prosjektet deployes nå via GitHub Pages. Hver push til `main` trigges av en GitHub Actions workflow
+(`.github/workflows/deploy.yml`) som bygger Vite-appen og publiserer `dist/` til Pages. Vite-konfigen bruker relativ `base`
+slik at statiske filer fungerer når de serveres fra et repo-underpath.
+
+For å teste lokalt:
+
+```bash
+npm install
+npm run build
+npm run preview
+```
 
 ---
 
-**Versjon:** 1.0  
-**Dato:** Oktober 2025  
+**Versjon:** 1.1
+**Dato:** Oktober 2025
 **Forfatter:** MorningCoffee Labs
